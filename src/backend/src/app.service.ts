@@ -45,7 +45,7 @@ export class AppService {
       if (!isOnDB) {
         //Stores data
         this.hitsRepository.create({
-          createdAt: hit.createdAt,
+          createdAt: hit.created_at,
           title: hit.title,
           url: hit.url,
           author: hit.author,
