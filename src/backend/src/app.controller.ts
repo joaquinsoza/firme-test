@@ -10,8 +10,14 @@ export class AppController {
     return this.appService.getActive();
   }
 
-  @Get('test')
-  getData(): any {
+  @Get('update_data')
+  getData(): Promise<string> {
     return this.appService.getData();
+  }
+
+  //TO-DO: Add types
+  @Get('fetch')
+  fetchDatabase(): any {
+    return this.appService.fetchDatabase();
   }
 }

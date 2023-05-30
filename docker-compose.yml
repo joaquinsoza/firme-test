@@ -32,11 +32,16 @@ services:
     tty: true
   
   mongodb:
-    image: mongo:6-jammy
+    image: mongo
+    environment:
+      - MONGO_INITDB_DATABASE=firme_db
+      - MONGO_INITDB_ROOT_USERNAME=root
+      - MONGO_INITDB_ROOT_PASSWORD=root
     ports:
       - '27017:27017'
     volumes:
-      - ./dbdata:/data/db:rw
+      - ./dbdata/data:/data/db:rw
+      - ./dbdata/init.d:/docker-entrypoint-initdb.d
     networks:
       - firme-network
 
