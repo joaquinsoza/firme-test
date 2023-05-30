@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+
+  backend:
+    image: firme_backend:0.0.1
+    volumes:
+      - ./src/backend:/workspace
+    ports:
+      - 3000:3000
+    environment:
+      - MONGODB_URL=mongodb://mongodb:27017/node-boilerplate
+    depends_on:
+      - mongodb
+    networks:
+      - firme-network
+    # command: "npm run start:dev"
+    tty: true
+
+  frontend:
+    image: firme_frontend:0.0.1
+    volumes:
+      - ./src/frontend:/workspace
+    ports:
+      - 4000:4000
+    environment:
+      - MONGODB_URL=mongodb://mongodb:27017/node-boilerplate
+    depends_on:
+      - mongodb
+    networks:
+      - firme-network
+    tty: true
+  
+  mongodb:
+    image: mongo:6-jammy
+    ports:
+      - '27017:27017'
+    volumes:
+      - ./dbdata:/data/db:rw
+    networks:
+      - firme-network
+
+volumes:
+  dbdata:
+
+networks:
+  firme-network:
+    driver: bridge

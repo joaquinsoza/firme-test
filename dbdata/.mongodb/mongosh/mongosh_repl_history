@@ -1,0 +1,4 @@
+exit
+WriteResult({ "nInserted" : 1 })
+db.user.insert({name: "Ada Lovelace", age: 205})
+use firme
