@@ -9,4 +9,9 @@ export class AppController {
   getActive(): string {
     return this.appService.getActive();
   }
+
+  @Get('test')
+  getData(): any {
+    return this.appService.getData();
+  }
 }
