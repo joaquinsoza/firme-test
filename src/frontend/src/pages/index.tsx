@@ -7,7 +7,7 @@ import Table from "~/components/table";
 import { fetchData } from "~/utils/fetchData";
 
 const Home: NextPage = () => {
-  const [data, setData] = useState()
+  const [data, setData] = useState() //TO-DO: Add types
 
   useEffect(() => {
     fetchData()
@@ -20,7 +20,6 @@ const Home: NextPage = () => {
       .catch((e: Error | AxiosError) => console.log(e));
   }, []);
   
-  console.log("🚀 « data:", data)
   return (
     <>
       <Head>

@@ -1,8 +1,9 @@
 import React from "react";
 import { dateFormatter } from "~/utils/dateFormatter";
 
+//TO-DO Add types
 export default function Table(data: any) {
-  console.log(data)
+
   return (
     <div className="flex flex-col">
       <div className="overflow-x-auto">
@@ -32,21 +33,21 @@ export default function Table(data: any) {
                 </tr>
               </thead>
               <tbody className="bg-gray-50 divide-y divide-gray-200">
-              {data.data.map((item) => {
-                console.log("item", item)
-                return (
-                  <tr>
-                    <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
-                      {item.story_title?? item.title}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                      {item.author}
-                    </td>
-                    <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
-                      {dateFormatter(item.createdAt)}
-                    </td>
-                  </tr> 
-                  )
+                {/* TO-DO: Add Types */}
+                {data.data && data.data.map((item, index) => {
+                  return (
+                    <tr key={index}>
+                      <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">
+                        {item.story_title?? item.title}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                        {item.author}
+                      </td>
+                      <td className="px-6 py-4 text-sm text-gray-800 whitespace-nowrap">
+                        {dateFormatter(item.createdAt)}
+                      </td>
+                    </tr> 
+                    )
                 })}
               </tbody>
             </table>
