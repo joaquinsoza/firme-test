@@ -41,7 +41,7 @@ The cron job runs every hour, at the start of the 10th minute.
 This must be used with a flag "-b" for backend and "-f" for frontend, it shows you the logs of the docker container
 
 **connect_to_docker.sh**
-This connects you to the container so you can tun things inside of it, it also uses flags
+This connects you to the container so you can run things inside of it, it also uses flags
 
 ## Comments
 
