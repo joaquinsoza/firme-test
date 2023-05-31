@@ -17,7 +17,7 @@ export const dateFormatter = (date: string) => {
     ("0" + current.getUTCDate()).slice(-2);
 
   if (inputDateString === currentDateString) {
-    let hourFormat = {
+    let hourFormat: any = {
       hour: "2-digit",
       minute: "2-digit",
       hour12: true,
@@ -38,6 +38,6 @@ export const dateFormatter = (date: string) => {
     return "Yesterday";
   }
 
-  let dateFormat = { month: "short", day: "2-digit", timeZone: "UTC" };
+  let dateFormat: any = { month: "short", day: "2-digit", timeZone: "UTC" };
   return new Intl.DateTimeFormat("en-US", dateFormat).format(input);
 };

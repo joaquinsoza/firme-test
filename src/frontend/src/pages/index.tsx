@@ -12,8 +12,9 @@ const Home: NextPage = () => {
   useEffect(() => {
     fetchData()
       .then((p) => {
-        const sortedData = p.sort(function (a, b) {
-          return new Date(b.createdAt) - new Date(a.createdAt);
+        //TO-DO: Add types
+        const sortedData = p.sort(function (a: { createdAt: string | number | Date; }, b: { createdAt: string | number | Date; }) {
+          return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
         });
         setData(sortedData)
       })

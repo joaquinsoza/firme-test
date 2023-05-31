@@ -34,7 +34,7 @@ export default function Table(data: any) {
               </thead>
               <tbody className="bg-gray-50 divide-y divide-gray-200">
                 {/* TO-DO: Add Types */}
-                {data.data && data.data.map((item, index) => {
+                {data.data && data.data.map((item: { story_title: any; title: any; author: any; createdAt: string; }, index: number) => {
                   return (
                     <tr key={index}>
                       <td className="px-6 py-4 text-sm font-medium text-gray-800 whitespace-nowrap">

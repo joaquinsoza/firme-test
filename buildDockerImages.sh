@@ -30,15 +30,15 @@ if ${b_flag}; then
 echo "+---------------------------+"
 echo "|  Building Backend image   |"
 echo "+---------------------------+"
-cd src/backend/docker
+cd src/backend
 bash build.sh
-cd ../../../
+cd ../../
 fi
 if ${f_flag}; then
 echo "+----------------------------+"
 echo "|  Building Frontend image   |"
 echo "+----------------------------+"
-cd src/frontend/docker
+cd src/frontend
 bash build.sh
-cd ../
+cd ../../
 fi

@@ -4,8 +4,8 @@ services:
 
   backend:
     image: firme_backend:0.0.1
-    volumes:
-      - ./src/backend:/workspace
+    # volumes:
+    #   - ./src/backend:/workspace
     ports:
       - 3000:3000
     environment:
@@ -19,8 +19,8 @@ services:
 
   frontend:
     image: firme_frontend:0.0.1
-    volumes:
-      - ./src/frontend:/workspace
+    # volumes:
+    #   - ./src/frontend:/workspace
     ports:
       - 4000:3000
     environment:
