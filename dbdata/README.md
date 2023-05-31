@@ -1,0 +1,1 @@
+The database data is housed in data directory. To prevent the upload of potentially large files and maintain efficiency, the other MongoDB files are excluded from version control using the .gitignore file.

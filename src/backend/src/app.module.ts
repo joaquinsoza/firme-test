@@ -12,7 +12,7 @@ import { HitsRepository } from './hits.repository';
     ScheduleModule.forRoot(),
     HttpModule,
     MongooseModule.forRoot(
-      'mongodb://username:password@mongodb:27017/?authMechanism=DEFAULT&authSource=firme_db',
+      'mongodb://username:password@mongodb:27017/?authMechanism=DEFAULT&authSource=firme_db', //This should an enviroment variable
       {
         dbName: 'firme_db',
       },

@@ -15,7 +15,7 @@ export class AppService {
     return 'Service status active';
   }
 
-  // @Cron('0 10 * * * *') //Uncomment to use cron pd: once an hour
+  @Cron('0 10 * * * *')
   handleCron() {
     console.log('Cron is running');
     this.getData();
@@ -25,7 +25,7 @@ export class AppService {
   async getData(): Promise<string> {
     //Getting the data
     const request = this.httpService
-      .get('https://hn.algolia.com/api/v1/search_by_date?query=nodejs')
+      .get('https://hn.algolia.com/api/v1/search_by_date?query=nodejs') //This could be an enviroment variable
       .pipe(map((res) => res.data))
       .pipe(
         catchError((error) => {
