@@ -22,6 +22,8 @@ After the images are ready, run:
 docker-compose up
 ```
 
+front url http://localhost:4000
+
 as easy as it gets
 
 ## Backend Endpoints
