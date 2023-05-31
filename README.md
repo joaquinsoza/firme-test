@@ -2,6 +2,8 @@
 
 This project is a full-stack application consisting of a backend (NestJS), a frontend (NextJS App - create t3 app), and a database (MongoDB).
 
+![exampleGif](./gif/example.gif)
+
 ## Prerequisites
 
 - Docker v20.10.0 or later (I'm using 20.10.23)
